@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus-concept</title>
-    <link rel="icon" href="/assets/img/Forge-Vindux.png">
+    <link rel="icon" href="./assets/img/Forge-Vindux.png">
     <link rel="stylesheet" href="./assets/css/indexstyle.css">
 </head>
 <body>
     <header class="header">
         <div class="logo-header">
-          <img src="assets/img/Forge-Vindux.png" alt="" srcset="" />
           <div class="title-menu">
-            <h1>Nexus_Codename</h1>
           </div>
         </div>
         <div class="nav-menu">
-          <input type="checkbox" id="check" />
-          <label for="check" class="checkbtn">
-            <i class="menu-icono"
-              ><img src="assets/img/hamburguesa.png" alt=""
-            /></i>
-          </label>
           <ul>
-            <li><a href="" class="link-nav">Proyectos</a></li>
             <li>
-              <a href="" class="link-nav">Solicitud de Proyectos</a>
-            </li>          <li>
-              <a href="" class="link-nav">Login</a>
+              <a href="#" onclick="openModal()" class="link-nav">Login</a>
             </li>
           </ul>
         </div>
       </header>
+      <div class="bg"></div>
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="./assets/img/login_usr.png" alt="Logo" class="login-logo"> <!-- Imagen -->
+            <h2>V-NEXUS</h2>
+            <form>
+                <label for="username">Usuario</label>
+                <input type="text" id="username" required>
+    
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" required>
+    
+                <button type="submit" class="btn-rgb">Ingresar</button>
+            </form>
+        </div>
+    </div>
       <section>
         <div class="logonbeta">
             <img src="./assets/img/Forge-Vindux.png" alt="logo-forge">
-            <h1>BETA APP</h1>
+            <h1>NEXUS CODENAME</h1>
         </div>
       </section>
 
@@ -53,5 +59,22 @@
         </svg>
         <div class="fill-space"></div>
     </div>
+    <script>
+      function openModal() {
+          document.getElementById("loginModal").style.display = "flex";
+      }
+      
+      function closeModal() {
+          document.getElementById("loginModal").style.display = "none";
+      }
+      
+      // Cerrar el modal si se hace clic fuera del contenido
+      window.onclick = function(event) {
+          let modal = document.getElementById("loginModal");
+          if (event.target === modal) {
+              closeModal();
+          }
+      }
+    </script>      
 </body>
 </html>
