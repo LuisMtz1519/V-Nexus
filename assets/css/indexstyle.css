@@ -29,7 +29,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url(./assets/img/nightSpaceDark.jpg);
+    background-image: url('https://raw.githubusercontent.com/LuisMtz1519/V-Nexus/main/assets/img/nightSpaceDark.jpg');
+
 }
 header {
     display: flex;
